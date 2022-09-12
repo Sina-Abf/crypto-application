@@ -22,6 +22,7 @@ const HeroSectionMain = () => {
               className="absolute top-0 right-[10%] hidden md:block"
               src={Star}
               alt="star"
+              loading="eager"
             />
           </div>
         </div>
@@ -42,20 +43,23 @@ const HeroSectionMain = () => {
             className="absolute bottom-0 left-0"
             src={PurpleCirlce}
             alt="purple-circle"
+            loading="eager"
           />
         </div>
       </div>
       <div className="hidden md:block px-8 relative">
-        <Image src={HeroImage} alt="globe" />
+        <Image src={HeroImage} alt="globe" loading="eager" />
         <Image
           className="absolute right-[15%] bottom-[35%]"
           src={OrangeCircle}
           alt="orange-circle"
+          loading="eager"
         />
         <Image
           className="absolute top-[5%]"
           src={BlueCircle}
           alt="purple-circle"
+          loading="eager"
         />
       </div>
     </div>
