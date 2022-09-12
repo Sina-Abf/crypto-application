@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import CryptoSection from '../components/sections/CryptoSection/CryptoSection';
 import HeroSection from '../components/sections/HeroSection';
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       </Head>
 
       <HeroSection />
+      <CryptoSection />
     </div>
   );
 }

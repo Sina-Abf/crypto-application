@@ -8,7 +8,7 @@ import Image from 'next/future/image';
 
 const HeroSectionMain = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2">
+    <div className="grid grid-cols-1 md:grid-cols-2 mb-14">
       <div className="px-24 flex flex-col">
         <div className="mt-16 text-center md:text-start mb-6">
           <h3 className="font-semibold text-secondary mb-2 md:text-2xl">

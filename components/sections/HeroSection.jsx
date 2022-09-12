@@ -1,8 +1,4 @@
-/* eslint-disable react/no-unescaped-entities */
-import Image from 'next/image';
 import Navbar from '../Navbar';
-import Button from '../UI/Button';
-import HeroImage from '../../public/illustrations/globe.png';
 import HeroSectionMain from './HeroSectionMain';
 
 const HeroSection = () => {

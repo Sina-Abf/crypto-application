@@ -2,6 +2,7 @@ import Image from 'next/image';
 import logo from '../public/logo.svg';
 import { useState } from 'react';
 import Button from './UI/Button';
+import { ArrowIcon } from './UI/Svgs';
 
 const Navbar = () => {
   const [openNav, setOpenNav] = useState(false);
@@ -74,20 +75,7 @@ const Navbar = () => {
             <li className="flex items-center gap-x-2">
               <span>Products</span>
               <span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="w-4 h-4"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                  />
-                </svg>
+                <ArrowIcon />
               </span>
             </li>
           </ul>
