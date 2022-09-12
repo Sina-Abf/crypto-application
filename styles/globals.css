@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,4 +7,20 @@
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
+}
+
+.bg-primary-custom {
+  background: linear-gradient(130deg, #468ef92b, #0c66ee1e);
+}
+
+.text-blue-gradient {
+  background: -webkit-linear-gradient(
+    283deg,
+    #3984f4,
+    #0cd3ff,
+    #2f7cf0,
+    #0e65e8
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }

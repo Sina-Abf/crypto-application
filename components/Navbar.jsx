@@ -93,10 +93,12 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex gap-x-2 pr-10">
-          <Button className="border border-secondary text-secondary">
+          <Button className="text-secondary hover:bg-secondary hover:text-white">
             Login
           </Button>
-          <Button className="bg-secondary text-white">Sign up</Button>
+          <Button className="bg-secondary text-white hover:bg-transparent hover:text-secondary">
+            Sign up
+          </Button>
         </div>
       </nav>
     </>
