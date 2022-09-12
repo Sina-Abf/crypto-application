@@ -31,10 +31,10 @@ const HeroSectionMain = () => {
           transfers or your credit/debit card.
         </p>
         <div className="flex flex-col md:flex-row gap-y-4 md:gap-x-8 max-w-sm mx-auto md:m-0 relative">
-          <Button className="bg-secondary py-6 text-white min-w-fit hover:bg-transparent hover:text-secondary">
+          <Button className="bg-secondary text-white min-w-fit hover:bg-transparent hover:text-secondary">
             Get Started
           </Button>
-          <Button className="py-6 text-secondary hover:bg-secondary hover:text-white">
+          <Button className="text-secondary hover:bg-secondary hover:text-white">
             Download App
           </Button>
         </div>
