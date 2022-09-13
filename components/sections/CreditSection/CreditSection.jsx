@@ -5,7 +5,7 @@ import { CheckboxIcon } from '../../UI/Svgs';
 
 const CreditSection = () => {
   return (
-    <section>
+    <section className="mb-24">
       <div className="flex flex-col md:flex-row items-center">
         <div className="mb-4">
           <Image src={creditImage} alt="credit-card" />

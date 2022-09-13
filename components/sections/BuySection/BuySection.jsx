@@ -28,7 +28,7 @@ const BuySection = () => {
               <BuyChoose />
             </div>
             <div className="flex items-center">
-              <BuyAmount title="Amount" />
+              <BuyAmount title="Get" />
               <BuyChoose />
             </div>
           </div>
