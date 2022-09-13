@@ -7,7 +7,7 @@ const CryptoSection = ({ data }) => {
 
   console.log(randDataSecond);
   return (
-    <section className="bg-white rounded-2xl mx-8 -mt-10 flex flex-col md:flex-row md:divide-x md:divide-gray/20 justify-around shadow-xl mb-8">
+    <section className="bg-white rounded-2xl -mt-10 flex flex-col md:flex-row md:divide-x md:divide-gray/20 justify-around shadow-xl mb-8 mx-auto max-w-sm md:max-w-full md:mx-8">
       <CryptoSectionChart data={randDataFirst} title="Trending" emojie="🤘" />
       <CryptoSectionChart
         data={randDataSecond}
