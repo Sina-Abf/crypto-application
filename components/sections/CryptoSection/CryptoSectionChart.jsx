@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { ArrowIcon } from '../../UI/Svgs';
-import FireIcon from '../../../public/fire.png';
+import FireIcon from './fire.png';
 import redChart from '../../../public/charts/down.svg';
 import greenChart from '../../../public/charts/up.svg';
 
