@@ -13,6 +13,10 @@ body {
   background: linear-gradient(130deg, #468ef92b, #0c66ee1e);
 }
 
+.bg-primary-custom-buy {
+  background: linear-gradient(130deg, #0c66ee0c, #468ef908);
+}
+
 .text-blue-gradient {
   background: -webkit-linear-gradient(
     283deg,
