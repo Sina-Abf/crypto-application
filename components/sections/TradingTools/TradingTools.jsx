@@ -50,7 +50,7 @@ const TradingTools = () => {
               or email. Dedicated account managers for partners.
             </p>
             <div className="px-8 font-medium flex flex-col md:flex-row items-center">
-              <Button className="w-full text-secondary border-2 py-5 mb-4">
+              <Button className="w-full text-secondary border-2 py-5 mb-4 hover:bg-secondary hover:text-white">
                 Get Started
               </Button>
               <h3 className="underline text-secondary text-center w-full mb-4">
