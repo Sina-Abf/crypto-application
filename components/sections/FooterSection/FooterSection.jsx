@@ -6,25 +6,25 @@ import { ArrowUpIcon } from '../../UI/Svgs';
 const FooterSection = () => {
   return (
     <footer className="px-4 pb-8">
-      <div className="flex flex-col md:flex-row md:justify-around border-y border-y-gray/20">
+      <div className="flex flex-col md:flex-row md:justify-around border-y border-y-gray/10 p-4">
         <div className="mb-4 pt-4">
           <Image src={logo} alt="logo" />
         </div>
-        <ul className="flex flex-col gap-y-4 text-gray font-medium border-b border-gray/20 md:border-r md:border-gray/20 md:border-b-0 md:pr-8 py-4">
+        <ul className="flex flex-col gap-y-4 text-gray font-medium border-b border-gray/10 md:border-r md:border-gray/10 md:border-b-0 md:pr-8 py-4">
           <li>Buy Crypto</li>
           <li>Exchanges</li>
           <li>Watchlist</li>
           <li>Portfolio</li>
           <li>NFT</li>
         </ul>
-        <ul className="flex flex-col gap-y-4 text-gray font-medium border-b border-gray/20 md:border-r md:border-gray/20 md:border-b-0 md:pr-8 py-4">
+        <ul className="flex flex-col gap-y-4 text-gray font-medium border-b border-gray/10 md:border-r md:border-gray/10 md:border-b-0 md:pr-8 py-4">
           <li>Products</li>
           <li>Abous Us</li>
           <li>Careers</li>
           <li>Blog</li>
           <li>Security</li>
         </ul>
-        <ul className="flex flex-col gap-y-4 text-gray font-medium border-b border-gray/20 md:border-r md:border-gray/20 md:border-b-0 md:pr-8 py-4">
+        <ul className="flex flex-col gap-y-4 text-gray font-medium border-b border-gray/10 md:border-r md:border-gray/10 md:border-b-0 md:pr-8 py-4">
           <li>Help Center</li>
           <li>Contact Us</li>
           <li>System Status</li>
