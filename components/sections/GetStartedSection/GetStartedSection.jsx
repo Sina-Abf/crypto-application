@@ -6,7 +6,7 @@ import Arrow from '../../../public/arrow.svg';
 
 const GetStartedSection = () => {
   return (
-    <section>
+    <section className="mb-32">
       <div className="flex flex-col justify-center items-center">
         <h3 className="text-center font-semibold text-xl mb-10">
           Get started in just a few minutes

@@ -2,6 +2,7 @@ import Head from 'next/head';
 import BuySection from '../components/sections/BuySection/BuySection';
 import CreditSection from '../components/sections/CreditSection/CreditSection';
 import CryptoSection from '../components/sections/CryptoSection/CryptoSection';
+import FaqSection from '../components/sections/FaqSection/FaqSection';
 import GetStartedSection from '../components/sections/GetStartedSection/GetStartedSection';
 import HeroSection from '../components/sections/HeroSection/HeroSection';
 import SecuritySection from '../components/sections/SecuritySection/SecuritySection';
@@ -23,6 +24,7 @@ export default function Home({ data }) {
       <TradingTools />
       <SecuritySection />
       <GetStartedSection />
+      <FaqSection />
     </div>
   );
 }
