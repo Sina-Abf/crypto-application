@@ -1,11 +1,35 @@
 import Image from 'next/image';
 import securityImage from '../../../public/illustrations/banks.png';
-import Button from '../../UI/Button';
 import { CheckboxIcon } from '../../UI/Svgs';
 
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
+import { useRef } from 'react';
+import { useEffect } from 'react';
+
 const SecuritySection = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    gsap.fromTo(
+      el,
+      { opacity: 0, translateY: 100 },
+      {
+        opacity: 1,
+        duration: 1,
+        translateY: 0,
+        scrollTrigger: {
+          trigger: el,
+        },
+      }
+    );
+  }, []);
+
   return (
-    <section className="mb-24">
+    <section ref={sectionRef} className="mb-24">
       <div className="flex flex-col md:flex-row items-center">
         <div className="mb-4">
           <Image src={securityImage} alt="credit-card" />

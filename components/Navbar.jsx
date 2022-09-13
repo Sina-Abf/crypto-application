@@ -32,7 +32,7 @@ const Navbar = () => {
           </svg>
         </button>
         {openNav && (
-          <ul className="md:hidden absolute bg-secondary text-white w-2/3 left-[20%] flex flex-col justify-center items-center gap-y-2 mt-72 rounded-xl p-2">
+          <ul className="md:hidden absolute z-20 bg-secondary text-white w-2/3 left-[20%] flex flex-col justify-center items-center gap-y-2 mt-72 rounded-xl p-2">
             <li>CryptoCurrency</li>
             <li>Exchanges</li>
             <li>Watchlist</li>

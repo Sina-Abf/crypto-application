@@ -7,9 +7,34 @@ import partner2 from '../../../public/partners/partner2.png';
 import partner3 from '../../../public/partners/partner3.png';
 import partner4 from '../../../public/partners/partner4.png';
 
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
+import { useRef } from 'react';
+import { useEffect } from 'react';
+
 const BuySection = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    gsap.fromTo(
+      el,
+      { opacity: 0, translateY: 200 },
+      {
+        opacity: 1,
+        duration: 1,
+        translateY: 0,
+        scrollTrigger: {
+          trigger: el,
+        },
+      }
+    );
+  }, []);
+
   return (
-    <section className="md:px-24 bg-primary-custom-buy">
+    <section ref={sectionRef} className="md:px-24 bg-primary-custom-buy">
       <div className="flex flex-col md:flex-row-reverse">
         <div className="px-2">
           <Image src={BuyImage} alt="buy-illustration" />
@@ -32,7 +57,7 @@ const BuySection = () => {
               <BuyChoose />
             </div>
           </div>
-          <Button className="w-full md:max-w-lg bg-secondary text-white px-4 mt-8 hover:bg-transparent hover:text-secondary">
+          <Button className="w-full sm:max-w-lg bg-secondary text-white px-4 mt-8 hover:bg-transparent hover:text-secondary">
             Buy Now
           </Button>
         </div>

@@ -6,18 +6,90 @@ import BlueCircle from '../../../public/particles/circle1.svg';
 import Star from '../../../public/particles/star1.svg';
 import Image from 'next/future/image';
 
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
+import { useRef } from 'react';
+import { useEffect } from 'react';
+
 const HeroSectionMain = () => {
+  const shortAnimation = useRef(null);
+  const shorterAnimation = useRef(null);
+  const mediumAnimation = useRef(null);
+  const particleAnimation = useRef(null);
+
+  useEffect(() => {
+    const firstAnim = shortAnimation.current;
+    const secondAnim = shorterAnimation.current;
+    const thirdAnim = mediumAnimation.current;
+    const particleAnim = particleAnimation.current;
+
+    gsap.fromTo(
+      firstAnim,
+      { translateX: -200 },
+      {
+        translateX: 0,
+        duration: 4,
+        scrollTrigger: {
+          trigger: firstAnim,
+        },
+      }
+    );
+    gsap.fromTo(
+      secondAnim,
+      { translateX: -200 },
+      {
+        translateX: 0,
+        duration: 6,
+        scrollTrigger: {
+          trigger: secondAnim,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      thirdAnim,
+      { translateX: -200 },
+      {
+        translateX: 0,
+        duration: 4,
+        scrollTrigger: {
+          trigger: thirdAnim,
+        },
+      }
+    );
+
+    gsap.fromTo(
+      particleAnim,
+      { translateX: -800 },
+      {
+        translateX: 0,
+        duration: 2,
+        delay: 2,
+        scrollTrigger: {
+          trigger: particleAnim,
+        },
+      }
+    );
+  }, []);
+
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 mb-14">
+    <section className="grid grid-cols-1 md:grid-cols-2 mb-14">
       <div className="md:px-24 flex flex-col">
         <div className="mt-16 text-center md:text-start mb-6">
-          <h3 className="font-semibold text-secondary mb-2 md:text-2xl">
+          <h3
+            ref={particleAnimation}
+            className="font-semibold text-secondary mb-2 md:text-2xl"
+          >
             SIGN UP TODAY
           </h3>
           <div className="text-4xl md:text-6xl font-bold relative w-full">
-            <h1>The World&apos;s</h1>
-            <h1 className="text-blue-gradient py-2">Fastest Growing</h1>
-            <h1>Crypto Web App</h1>
+            <h1 ref={shortAnimation}>The World&apos;s</h1>
+            <h1 ref={shorterAnimation} className="text-blue-gradient py-2">
+              Fastest Growing
+            </h1>
+            <h1 ref={mediumAnimation}>Crypto Web App</h1>
             <Image
               className="absolute top-0 right-[10%] hidden md:block"
               src={Star}
@@ -62,7 +134,7 @@ const HeroSectionMain = () => {
           loading="eager"
         />
       </div>
-    </div>
+    </section>
   );
 };
 export default HeroSectionMain;

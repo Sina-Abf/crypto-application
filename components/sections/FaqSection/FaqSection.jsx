@@ -1,9 +1,12 @@
 import Image from 'next/image';
 import faqImage from '../../../public/illustrations/faq.png';
-import { ArrowIcon, ArrowUpIcon } from '../../UI/Svgs';
-import { useState } from 'react';
+import { ArrowUpIcon } from '../../UI/Svgs';
 import FaqBar from './FaqBar';
 import Button from '../../UI/Button';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+import { useRef } from 'react';
 import { useEffect } from 'react';
 
 const faqData = [
@@ -41,8 +44,26 @@ const scrollToTop = () => {
 };
 
 const FaqSection = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    gsap.fromTo(
+      el,
+      { opacity: 0, translateY: 100 },
+      {
+        opacity: 1,
+        duration: 1,
+        translateY: 0,
+        scrollTrigger: {
+          trigger: el,
+        },
+      }
+    );
+  }, []);
+
   return (
-    <section>
+    <section ref={sectionRef}>
       <div className="flex flex-col md:flex-row mb-8">
         <div className="mb-8">
           <Image src={faqImage} alt="bank" />

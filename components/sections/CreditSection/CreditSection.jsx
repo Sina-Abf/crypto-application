@@ -2,10 +2,32 @@ import Image from 'next/image';
 import creditImage from '../../../public/illustrations/credit-card.png';
 import Button from '../../UI/Button';
 import { CheckboxIcon } from '../../UI/Svgs';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { useRef } from 'react';
+import { useEffect } from 'react';
+gsap.registerPlugin(ScrollTrigger);
 
 const CreditSection = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    gsap.fromTo(
+      el,
+      { opacity: 0, translateY: 200 },
+      {
+        opacity: 1,
+        duration: 1,
+        translateY: 0,
+        scrollTrigger: {
+          trigger: el,
+        },
+      }
+    );
+  }, []);
   return (
-    <section className="mb-24">
+    <section ref={sectionRef} className="mb-24">
       <div className="flex flex-col md:flex-row items-center">
         <div className="mb-4">
           <Image src={creditImage} alt="credit-card" />

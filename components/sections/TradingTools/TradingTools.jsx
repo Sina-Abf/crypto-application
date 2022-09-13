@@ -2,10 +2,34 @@ import Image from 'next/future/image';
 import tradingToolsImage from '../../../public/illustrations/tradingtools.png';
 import starIcon from '../../../public/particles/star1.svg';
 import Button from '../../UI/Button';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
+import { useRef } from 'react';
+import { useEffect } from 'react';
 
 const TradingTools = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    gsap.fromTo(
+      el,
+      { opacity: 0, translateY: 100 },
+      {
+        opacity: 1,
+        duration: 1,
+        translateY: 0,
+        scrollTrigger: {
+          trigger: el,
+        },
+      }
+    );
+  }, []);
+
   return (
-    <section className="mb-24">
+    <section ref={sectionRef} className="mb-24">
       <div className="flex flex-col md:gap-x-8 md:flex-row-reverse">
         <div className="relative mb-5">
           <Image

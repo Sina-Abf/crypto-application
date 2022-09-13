@@ -2,10 +2,34 @@ import Image from 'next/image';
 import logo from '../../../public/logo.svg';
 import Button from '../../UI/Button';
 import { ArrowUpIcon } from '../../UI/Svgs';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+
+import { useRef } from 'react';
+import { useEffect } from 'react';
 
 const FooterSection = () => {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    gsap.fromTo(
+      el,
+      { opacity: 0, translateY: 100 },
+      {
+        opacity: 1,
+        duration: 1,
+        translateY: 0,
+        scrollTrigger: {
+          trigger: el,
+        },
+      }
+    );
+  }, []);
+
   return (
-    <footer className="px-4 pb-8">
+    <footer ref={sectionRef} className="px-4 pb-8">
       <div className="flex flex-col md:flex-row md:justify-around border-y border-y-gray/10 p-4">
         <div className="mb-4 pt-4">
           <Image src={logo} alt="logo" />
