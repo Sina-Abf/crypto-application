@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import faqImage from '../../../public/illustrations/faq.png';
-import { ArrowIcon } from '../../UI/Svgs';
+import { ArrowIcon, ArrowUpIcon } from '../../UI/Svgs';
 import { useState } from 'react';
 import FaqBar from './FaqBar';
+import Button from '../../UI/Button';
 
 const faqData = [
   {
@@ -34,7 +35,7 @@ const faqData = [
 const FaqSection = () => {
   return (
     <section>
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row mb-8">
         <div className="mb-8">
           <Image src={faqImage} alt="bank" />
         </div>
@@ -56,6 +57,14 @@ const FaqSection = () => {
             })}
           </ul>
         </div>
+      </div>
+      <div className="flex justify-center items-center pb-16">
+        <Button className="border-gray/40 text-gray rounded-lg py-2 text-sm flex items-center">
+          <span>Back to top</span>
+          <span>
+            <ArrowUpIcon />
+          </span>
+        </Button>
       </div>
     </section>
   );
