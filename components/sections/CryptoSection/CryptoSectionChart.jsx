@@ -1,17 +1,14 @@
 import Image from 'next/image';
 import { ArrowIcon } from '../../UI/Svgs';
-import FireIcon from './fire.png';
 import redChart from '../../../public/charts/down.svg';
 import greenChart from '../../../public/charts/up.svg';
 
-const CryptoSectionChart = ({ data, title }) => {
+const CryptoSectionChart = ({ data, title, emojie }) => {
   return (
     <div className="mb-10 w-full">
       <div className="flex justify-between items-center p-4">
         <div className="flex gap-x-2 items-center">
-          <span className="w-5">
-            <Image src={FireIcon} alt="fire" />
-          </span>
+          <span className="w-5">{emojie}</span>
           <span className="font-semibold">{title}</span>
         </div>
         <div className="flex gap-x-1 items-center">
