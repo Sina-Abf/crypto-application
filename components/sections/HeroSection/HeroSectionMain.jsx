@@ -1,9 +1,9 @@
-import Button from '../UI/Button';
-import HeroImage from '../../public/illustrations/globe.png';
-import OrangeCircle from '../../public/particles/circle3.svg';
-import PurpleCirlce from '../../public/particles/circle2.svg';
-import BlueCircle from '../../public/particles/circle1.svg';
-import Star from '../../public/particles/star1.svg';
+import Button from '../../UI/Button';
+import HeroImage from '../../../public/illustrations/globe.png';
+import OrangeCircle from '../../../public/particles/circle3.svg';
+import PurpleCirlce from '../../../public/particles/circle2.svg';
+import BlueCircle from '../../../public/particles/circle1.svg';
+import Star from '../../../public/particles/star1.svg';
 import Image from 'next/future/image';
 
 const HeroSectionMain = () => {

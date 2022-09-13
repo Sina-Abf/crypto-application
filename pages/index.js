@@ -1,6 +1,7 @@
 import Head from 'next/head';
+import BuySection from '../components/sections/BuySection/BuySection';
 import CryptoSection from '../components/sections/CryptoSection/CryptoSection';
-import HeroSection from '../components/sections/HeroSection';
+import HeroSection from '../components/sections/HeroSection/HeroSection';
 
 export default function Home({ data }) {
   console.log(data);
@@ -13,6 +14,7 @@ export default function Home({ data }) {
 
       <HeroSection />
       <CryptoSection data={data} />
+      <BuySection />
     </div>
   );
 }
