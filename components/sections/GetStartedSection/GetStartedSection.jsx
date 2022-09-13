@@ -36,7 +36,7 @@ const GetStartedSection = () => {
         <h3 className="text-center font-semibold text-xl mb-10">
           Get started in just a few minutes
         </h3>
-        <div className="flex flex-col gap-y-6 md:flex-row md:px-24">
+        <div className="flex flex-col gap-y-6 md:flex-row md:px-24 px-6">
           <div className="text-center flex flex-col justify-center items-center">
             <Image src={photo1} alt="photo-1" />
             <h3 className="font-semibold text-xl mb-4">Sign Up</h3>
