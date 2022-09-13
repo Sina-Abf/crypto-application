@@ -5,7 +5,7 @@ import Button from '../../UI/Button';
 
 const TradingTools = () => {
   return (
-    <section>
+    <section className="mb-24">
       <div className="flex flex-col md:gap-x-8 md:flex-row-reverse">
         <div className="relative mb-5">
           <Image

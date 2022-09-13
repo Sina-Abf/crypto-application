@@ -3,6 +3,7 @@ import BuySection from '../components/sections/BuySection/BuySection';
 import CreditSection from '../components/sections/CreditSection/CreditSection';
 import CryptoSection from '../components/sections/CryptoSection/CryptoSection';
 import HeroSection from '../components/sections/HeroSection/HeroSection';
+import SecuritySection from '../components/sections/SecuritySection/SecuritySection';
 import TradingTools from '../components/sections/TradingTools/TradingTools';
 
 export default function Home({ data }) {
@@ -19,6 +20,7 @@ export default function Home({ data }) {
       <BuySection />
       <CreditSection />
       <TradingTools />
+      <SecuritySection />
     </div>
   );
 }
