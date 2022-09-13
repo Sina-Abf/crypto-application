@@ -10,7 +10,7 @@ import partner4 from '../../../public/partners/partner4.png';
 const BuySection = () => {
   return (
     <section className="md:px-24 bg-primary-custom-buy">
-      <div className="flex flex-col md:flex-row-reverse mb-24">
+      <div className="flex flex-col md:flex-row-reverse">
         <div className="px-2">
           <Image src={BuyImage} alt="buy-illustration" />
         </div>
@@ -37,7 +37,7 @@ const BuySection = () => {
           </Button>
         </div>
       </div>
-      <div className="flex justify-center items-center flex-col">
+      <div className="flex justify-center items-center flex-col px-3 mb-44">
         <div className="text-center mb-4">
           <h1 className="text-2xl font-medium mb-2">
             Trusted Partners Worldwide
@@ -47,7 +47,7 @@ const BuySection = () => {
             globe
           </p>
         </div>
-        <div className="flex flex-col md:flex-row">
+        <div className="flex flex-col md:flex-row w-2/3 sm:w-fit">
           <Image src={partner1} alt="partner-1" />
           <Image src={partner2} alt="partner-2" />
           <Image src={partner3} alt="partner-3" />
