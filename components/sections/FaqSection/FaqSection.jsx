@@ -4,6 +4,7 @@ import { ArrowIcon, ArrowUpIcon } from '../../UI/Svgs';
 import { useState } from 'react';
 import FaqBar from './FaqBar';
 import Button from '../../UI/Button';
+import { useEffect } from 'react';
 
 const faqData = [
   {
@@ -32,6 +33,13 @@ const faqData = [
   },
 ];
 
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+};
+
 const FaqSection = () => {
   return (
     <section>
@@ -59,7 +67,10 @@ const FaqSection = () => {
         </div>
       </div>
       <div className="flex justify-center items-center pb-16">
-        <Button className="border-gray/40 text-gray rounded-lg py-2 text-sm flex items-center">
+        <Button
+          onClick={scrollToTop}
+          className="border-gray/40 text-gray rounded-lg py-2 text-sm flex items-center hover:bg-gray hover:text-white md:px-8 md:py-3 md:text-base"
+        >
           <span>Back to top</span>
           <span>
             <ArrowUpIcon />
