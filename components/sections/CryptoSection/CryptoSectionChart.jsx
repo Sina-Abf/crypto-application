@@ -31,7 +31,7 @@ const CryptoSectionChart = ({ data, title, emojie }) => {
               key={currency.id}
               className="flex items-center justify-around gap-x-4 w-full pt-4"
             >
-              <div className="flex items-center gap-x-2 text-center min-w-fit px-2 md:px-0">
+              <div className="flex items-center gap-x-2 text-center min-w-fit px-2 md:px-0 md:w-1/3 w-1/2">
                 <Image
                   src={currency.image}
                   alt={currency.id}

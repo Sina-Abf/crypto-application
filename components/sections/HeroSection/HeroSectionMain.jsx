@@ -30,7 +30,7 @@ const HeroSectionMain = () => {
       { translateX: -200 },
       {
         translateX: 0,
-        duration: 4,
+        duration: 2,
         scrollTrigger: {
           trigger: firstAnim,
         },
@@ -41,7 +41,7 @@ const HeroSectionMain = () => {
       { translateX: -200 },
       {
         translateX: 0,
-        duration: 6,
+        duration: 2.5,
         scrollTrigger: {
           trigger: secondAnim,
         },
@@ -53,7 +53,7 @@ const HeroSectionMain = () => {
       { translateX: -200 },
       {
         translateX: 0,
-        duration: 4,
+        duration: 3,
         scrollTrigger: {
           trigger: thirdAnim,
         },

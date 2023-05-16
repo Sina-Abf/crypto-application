@@ -10,7 +10,6 @@ import SecuritySection from '../components/sections/SecuritySection/SecuritySect
 import TradingTools from '../components/sections/TradingTools/TradingTools';
 
 export default function Home({ data }) {
-  console.log(data);
   return (
     <div className="min-w-fit container max-w-screen-xl mx-auto">
       <Head>
